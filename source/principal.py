@@ -1,11 +1,11 @@
 from aiohttp import web
 import json
-from numerosromanos.source.int2roman_lucas import roman_number
-from valida_cpf.source.validacpf_lucas import CPFvalidator
-from distancia_entre_zeros.source.count_zeros_lucas import Count_zeros
-from generate_passwords.source.generate_password_lucas import random_pass
-from classificador_senhas.source.classificador_senhas_lucas import Classifica
-from encryption_password.source.encrypto_password import crypto_pass
+from files.numerosromanos.source.int2roman_lucas import roman_number
+from files.valida_cpf.source.validacpf_lucas import CPFvalidator
+from files.distancia_entre_zeros.source.count_zeros_lucas import Count_zeros
+from files.generate_passwords.source.generate_password_lucas import random_pass
+from files.classificador_senhas.source.classificador_senhas_lucas import Classifica
+from files.encryption_password.source.encrypto_password import crypto_pass
 
 async def getRoman(request):
     response_obj = roman_number.keyboard2roman(request.match_info['string'])
