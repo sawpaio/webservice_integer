@@ -26,7 +26,7 @@ async def getGeradordeSenhas(request):
 
     return web.Response(text=json.dumps({'senha gerada:': response_obj,
                                          'força da senha:': response_obj2,
-                                         'hash MD5 da senha:': response_obj3}))
+                                         'hash_MD5 da senha:': response_obj3}))
 
 app = web.Application()
 app.router.add_get("/roman/{string}", getRoman)
